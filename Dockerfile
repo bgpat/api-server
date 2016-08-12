@@ -7,7 +7,6 @@ COPY src/api/ /tmp/
 
 # ENV GOPATH /go
 # ENV PATH $PATH:$GOPATH/bin
-ENV AUTOMIGRATE 1
 
 # RUN apk --update add go alpine-sdk &&\
     # export GOPATH=/go PATH=$PATH:/go/bin AUTOMIGRATE=1 &&\
