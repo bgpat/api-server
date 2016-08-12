@@ -1,4 +1,14 @@
-api:
-  build: .
-  ports:
-    - "8080"
+version: '2'
+services:
+  db:
+    image: postgres:9.4
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: api
+  api:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - "db"
